@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test.html</title>
+</head>
+<body>
+    <!-- <div>
+        <h3>{{que1}}</h3>
+    </div>
+    <div>
+        <div>
+          
+            <input type="radio" name="ans">{{a}}<br>
+            <input type="radio" name="ans">{{b}}<br>
+            <input type="radio" name="ans">{{c}}<br>
+            <input type="radio" name="ans">{{c}}
+        </div>
+    </div> -->
+    <div>
+        <h3>{{que | upper}}</h3>
+    </div>
+    <div>
+        {% for option in options%}
+        <div>
+           
+            <input type="radio" name="ans">{{option}}<br>
+        </div>
+        {% endfor%}
+    </div>
+
+</body>
+</html>

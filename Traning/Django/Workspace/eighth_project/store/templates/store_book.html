@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Book</title>
+</head>
+<body>
+    <h1>Store your Book here :</h1>
+
+    <div>
+        <form action="{% url 'store:StoreBook' %}" method="post">
+            {% csrf_token %}
+            <label for="bookname">Bookname</label>
+            <input type="text" name="bookname"><br>
+            <label for="price">Price</label>
+            <input type="number" name="price"><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear"> 
+        </form>
+    </div>
+</body>
+</html>

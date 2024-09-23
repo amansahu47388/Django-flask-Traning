@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <div>
+        <h1>This is home page</h1>
+    </div>
+
+    <div>
+        <form action="{% url 'mlapp:result' %}">
+            {% csrf_token %}
+            ID:<input type="text" required name="ID"><br><br>
+            Visit.Time:<input type="text" required name="Visit.Time"><br><br>
+            Average.Expense:<input type="text" required name="Average.Expense"><br><br>
+            Sex:<input type="text" required name="Sex"><br><br>
+            
+            <input type="submit" name="submit" value="submit">
+        </form>
+    </div>
+</body>
+</html>
